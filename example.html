@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+    <title>Typeahead</title>
+    <link rel="stylesheet" href="css/typeahead.css" />
+    <script src="saxon-js/SaxonJS2.rt.js"></script>
+    <script>
+            window.onload = function () {
+                SaxonJS.transform({
+                    stylesheetLocation: "xslt/example.sef.json"
+                },
+                "async");
+            }</script>
+  </head>
+  <body>
+    <p>Tree: <input type="text" data-typeahead="trees" placeholder="Enter a tree"/><span data-typeahead=""/></p>
+    <p>Animal: <input type="text" data-typeahead="animals" placeholder="Enter an animal"/><span data-typeahead=""/></p>  </body>
+</html>

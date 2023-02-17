@@ -1,0 +1,38 @@
+/* Highlight color for the drop down when the mouse is over: */
+/* Highlight color for the drop down when arrow keys are pressed: */
+body {
+  font-family: arial, helvetica, sans-serif;
+  background-color: #ffffff;
+}
+ul[data-typeahead] {
+  margin: 0;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  padding-top: 0;
+  padding-bottom: 0;
+  cursor: default;
+}
+li[data-typeahead] {
+  list-style-type: none;
+}
+li[data-typeahead-kb-active] {
+  color: #ffffff;
+  background-color: #a9a9a9;
+}
+li[data-typeahead]:hover {
+  color: #ffffff;
+  background-color: #d3d3d3;
+}
+span[data-typeahead] {
+  display: none;
+  background-color: #ffffff;
+  box-shadow: 2px 2px #e6e6e6;
+  border-left-style: solid;
+  border-top-style: solid;
+  border-left-width: 1px;
+  border-top-width: 1px;
+  border-top-color: #e6e6e6;
+  border-left-color: #e6e6e6;
+  max-height: 10ex;
+  overflow: auto;
+}

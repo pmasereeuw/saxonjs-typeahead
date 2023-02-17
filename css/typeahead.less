@@ -1,0 +1,54 @@
+@body-background-color: white;
+
+@typeahead-box-background-color: @body-background-color;
+@typeahead-box-shadow-color: darken(@typeahead-box-background-color, 10%);
+
+/* Highlight color for the drop down when the mouse is over: */
+@typeahead-fgcolor-mouse-highlight: @body-background-color;
+@typeahead-bgcolor-mouse-highlight: lightgrey;
+
+/* Highlight color for the drop down when arrow keys are pressed: */
+@typeahead-fgcolor-kb-highlight: @body-background-color;
+@typeahead-bgcolor-kb-highlight: darkgrey;
+
+body {
+    font-family:arial, helvetica, sans-serif;
+    background-color: @body-background-color;
+}
+
+ul[data-typeahead] {
+    margin: 0;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    padding-top: 0;
+    padding-bottom: 0;
+    cursor: default;
+}
+
+li[data-typeahead] {
+    list-style-type: none;
+}
+
+li[data-typeahead-kb-active] {
+    color: @typeahead-fgcolor-kb-highlight;
+    background-color: @typeahead-bgcolor-kb-highlight;
+}
+
+li[data-typeahead]:hover {
+    color: @typeahead-fgcolor-mouse-highlight;
+    background-color: @typeahead-bgcolor-mouse-highlight;
+}
+
+span[data-typeahead] {
+    display: none;
+    background-color: @typeahead-box-background-color;
+    box-shadow: 2px 2px @typeahead-box-shadow-color;
+    border-left-style: solid;
+    border-top-style: solid;
+    border-left-width: 1px;
+    border-top-width: 1px;
+    border-top-color: @typeahead-box-shadow-color;
+    border-left-color: @typeahead-box-shadow-color;
+    max-height: 10ex;
+    overflow: auto;
+}
